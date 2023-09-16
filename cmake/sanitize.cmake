@@ -1,5 +1,12 @@
 
-set(SANITIZE_FLAGS "address,undefined,leak")
+set(SANITIZE_FLAGS address )
+if(NOT MSVC)
+list(APPEND SANITIZE_FLAGS undefined leak)
+endif()
 
-add_compile_options(-fsanitize=${SANITIZE_FLAGS})
-add_link_options(-fsanitize=${SANITIZE_FLAGS})
+foreach(FLAG ${SANITIZE_FLAGS})
+
+add_compile_options(-fsanitize=${FLAG})
+add_link_options(-fsanitize=${FLAG})
+
+endforeach()
