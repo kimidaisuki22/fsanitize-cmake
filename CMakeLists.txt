@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.23.0)
 project(main VERSION 0.1.0)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
-set(CMAKE_CXX_STANDARD 20)
+include(cmake/standard.cmake)
 
 include(cmake/sanitize.cmake)
 add_executable(main main.cpp)
