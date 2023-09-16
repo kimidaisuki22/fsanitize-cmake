@@ -1,7 +1,10 @@
 
 set(SANITIZE_FLAGS address )
 if(NOT MSVC)
-list(APPEND SANITIZE_FLAGS undefined leak)
+list(APPEND SANITIZE_FLAGS undefined)
+if(NOT APPLE)
+list(APPEND SANITIZE_FLAGS leak)
+endif()
 endif()
 
 if(MSVC)
