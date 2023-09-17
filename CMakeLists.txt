@@ -14,3 +14,7 @@ find_package(fmt CONFIG REQUIRED)
 target_link_libraries(main PRIVATE fmt::fmt)
 
 include(cmake/custom_target.cmake)
+
+if(APPLE)
+include(cmake/custom_command.cmake)
+endif()
