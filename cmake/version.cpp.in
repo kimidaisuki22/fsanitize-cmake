@@ -1,0 +1,4 @@
+#include <string_view>
+std::string_view get_project_version(){
+    return "@PROJECT_VERSION@"
+}
