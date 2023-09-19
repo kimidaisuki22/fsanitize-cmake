@@ -19,3 +19,7 @@ if(APPLE)
 include(cmake/custom_command.cmake)
 endif()
 include(cmake/custom_command_and_target.cmake)
+
+include(cmake/add_to_file_to_build.cmake)
+
+add_file_to_build(image/a.png)
