@@ -25,3 +25,5 @@ include(cmake/add_to_file_to_build.cmake)
 add_file_to_build(image/a.png)
 
 include(cmake/version.cmake)
+
+include(cmake/xcode_sign.cmake)
