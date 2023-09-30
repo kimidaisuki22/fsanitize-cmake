@@ -1,4 +1,7 @@
 #include <string_view>
 std::string_view get_project_version(){
-    return "@PROJECT_VERSION@"
+    return "@PROJECT_VERSION@";
+}
+std::string_view get_project_git_hash(){
+    return "@GIT_HASH@";
 }
